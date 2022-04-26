@@ -3,7 +3,7 @@ import styles from './Books.module.scss';
 import AddBook from '../components/AddBook';
 import BookList from '../components/BookList';
 
-const Books = () => {
+const BooksContainer = () => {
   const books = [
     {
       id: 1,
@@ -23,4 +23,4 @@ const Books = () => {
   );
 };
 
-export default Books;
+export default BooksContainer;
