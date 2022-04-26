@@ -3,22 +3,19 @@ import PropTypes from 'prop-types';
 import styles from './Book.module.scss';
 
 const Book = (props) => {
-  const {
-    title, author,
-  } = props;
+  const { book } = props;
 
   return (
-    <div className={styles.book}>
-      <h3>{title}</h3>
-      <p>{author}</p>
+    <li className={styles.book}>
+      <h3>{book.title}</h3>
+      <p>{book.author}</p>
       <button type="button" className={styles.removeButton}>Remove</button>
-    </div>
+    </li>
   );
 };
 
 Book.propTypes = {
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  book: PropTypes.node.isRequired,
 };
 
 export default Book;
