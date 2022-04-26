@@ -2,7 +2,7 @@
 
 # Bookstore
 
-> In this project I build a mobile and desktop version of a calculator app, using React for the very first time.
+> In this project I build a mobile and desktop version of a Bookstore app, using React.
 
 ## Built With
 
@@ -14,8 +14,6 @@
 ## Live Demo
 
 - [GitHub Deploy](https://jsug9.github.io/bookstore/).
-- [Heroku]().
-- [Netlify]().
 
 ## Getting Started
 
