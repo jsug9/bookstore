@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Book.module.scss';
 
-const Book = (props) => {
+const BookItem = (props) => {
   const { book } = props;
 
   return (
@@ -14,8 +14,8 @@ const Book = (props) => {
   );
 };
 
-Book.propTypes = {
+BookItem.propTypes = {
   book: PropTypes.node.isRequired,
 };
 
-export default Book;
+export default BookItem;

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Book from './Book';
+import BookItem from './BookItem';
 import styles from './BookList.module.scss';
 
 const BookList = (props) => {
@@ -9,7 +9,7 @@ const BookList = (props) => {
   return (
     <ul className={styles.bookList}>
       {books.map((book) => (
-        <Book
+        <BookItem
           key={book.id}
           book={book}
         />

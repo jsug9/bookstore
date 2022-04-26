@@ -8,7 +8,7 @@ import React from 'react';
 
 import Navbar from './components/Navbar';
 import Categories from './Pages/Categories';
-import Books from './Pages/Books';
+import BooksContainer from './Pages/BooksContainer';
 
 const App = () => (
   <Router basename={process.env.PUBLIC_URL}>
@@ -16,7 +16,7 @@ const App = () => (
       <Navbar />
       <Switch>
         <Route path="/" exact>
-          <Books />
+          <BooksContainer />
         </Route>
         <Route path="/categories">
           <Categories />
