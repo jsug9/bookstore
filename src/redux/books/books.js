@@ -21,6 +21,5 @@ const booksReducer = ((state = [], action) => {
   }
 });
 
-export {
-  addBook, removeBook, booksReducer,
-};
+export { addBook, removeBook };
+export default booksReducer;
