@@ -22,7 +22,11 @@ const BookItem = (props) => {
 };
 
 BookItem.propTypes = {
-  book: PropTypes.node.isRequired,
+  book: PropTypes.exact({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    author: PropTypes.string,
+  }).isRequired,
 };
 
 export default BookItem;
