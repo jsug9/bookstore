@@ -23,7 +23,7 @@ const BookItem = (props) => {
 
 BookItem.propTypes = {
   book: PropTypes.exact({
-    id: PropTypes.number,
+    id: PropTypes.string,
     title: PropTypes.string,
     author: PropTypes.string,
   }).isRequired,

@@ -10,7 +10,6 @@ const checkStatus = (payload) => ({
 const categoriesReducer = (state = initialState, action) => {
   switch (action.type) {
     case CHECK_STATUS:
-      console.log([...state, action.payload]);
       return [...state, action.payload];
     default:
       return state;
