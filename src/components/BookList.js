@@ -1,10 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
 import styles from './BookList.module.scss';
 
-const BookList = (props) => {
-  const { books } = props;
+const BookList = () => {
+  const books = useSelector((state) => state.books);
 
   return (
     <ul className={styles.bookList}>
@@ -16,10 +16,6 @@ const BookList = (props) => {
       ))}
     </ul>
   );
-};
-
-BookList.propTypes = {
-  books: PropTypes.node.isRequired,
 };
 
 export default BookList;
