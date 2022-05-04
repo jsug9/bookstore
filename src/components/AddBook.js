@@ -2,7 +2,6 @@ import { v4 as uuidv4 } from 'uuid';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
-import styles from './AddBook.module.scss';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -25,7 +24,7 @@ const AddBook = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form onSubmit={handleSubmit} className="form">
       <input
         type="text"
         className="input-text"

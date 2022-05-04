@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './Books.module.scss';
 import AddBook from '../components/AddBook';
 import BookList from '../components/BookList';
 
@@ -13,8 +12,8 @@ const BooksContainer = () => {
   ];
 
   return (
-    <div className={styles.books}>
-      <div className={styles.bookList}>
+    <div className="books">
+      <div className="bookList">
         <h2>Books Section</h2>
         <BookList books={books} />
       </div>
