@@ -24,4 +24,18 @@ const postBook = async (book) => {
   return data;
 };
 
-export { fetchBooks, postBook };
+const removeBook = async (id) => {
+  const response = await fetch(`${URL}/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: id,
+    }),
+  });
+  const data = await response.text();
+  return data;
+};
+
+export { fetchBooks, postBook, removeBook };
