@@ -15,8 +15,8 @@ const BookList = () => {
     <ul className={styles.bookList}>
       {books.map((book) => (
         <BookItem
-          key={book[0]}
-          book={book[1][0]}
+          key={book.id}
+          book={book}
         />
       ))}
     </ul>

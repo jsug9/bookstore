@@ -9,7 +9,11 @@ const sortBooks = (books) => books.sort((a, b) => ((a.title > b.title) ? 1 : -1)
 
 const getBooks = () => async (dispatch) => {
   const result = await fetchBooks();
-  const books = Object.entries(result);
+  const books = Object.entries(result).map(([itemId, [book]]) => ({
+    id: itemId,
+    title: book.title,
+    author: book.author,
+  }));
   dispatch({
     type: GET_BOOKS,
     payload: sortBooks(books),
