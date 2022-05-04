@@ -1,4 +1,4 @@
-import { fetchBooks, postBook, deleteBook } from "../APIcall";
+import { fetchBooks, postBook, deleteBook } from '../APIcall';
 
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
@@ -21,13 +21,20 @@ const initialState = [
   },
 ];
 
-const addBook = (payload) => ({
-  type: ADD_BOOK,
-  payload,
+const addBook = (payload) => (async (dispatch) => {
+  await postBook(payload);
+  dispatch({
+    type: ADD_BOOK,
+    payload,
+  });
 });
-const removeBook = (payload) => ({
-  type: REMOVE_BOOK,
-  payload,
+
+const removeBook = (payload) => (async (dispatch) => {
+  await deleteBook(payload);
+  dispatch({
+    type: REMOVE_BOOK,
+    payload,
+  });
 });
 
 const booksReducer = ((state = initialState, action) => {
