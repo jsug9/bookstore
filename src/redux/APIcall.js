@@ -7,3 +7,21 @@ const fetchBooks = async () => {
   const data = await result.json();
   return data;
 };
+
+const postBook = async (book) => {
+  const response = await fetch(URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: book.id,
+      title: book.title,
+      author: book.author,
+    }),
+  });
+  const data = await response.text();
+  return data;
+};
+
+export { fetchBooks, postBook };
