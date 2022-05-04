@@ -24,7 +24,7 @@ const postBook = async (book) => {
   return data;
 };
 
-const removeBook = async (id) => {
+const deleteBook = async (id) => {
   const response = await fetch(`${URL}/${id}`, {
     method: 'DELETE',
     headers: {
@@ -38,4 +38,4 @@ const removeBook = async (id) => {
   return data;
 };
 
-export { fetchBooks, postBook, removeBook };
+export { fetchBooks, postBook, deleteBook };
