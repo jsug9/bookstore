@@ -1,37 +1,48 @@
+import { fetchBooks, postBook, deleteBook } from '../APIcall';
+
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
+const GET_BOOKS = 'bookStore/books/GET_BOOKS ';
 
-const initialState = [
-  {
-    id: '1',
-    title: 'Book 1',
-    author: 'Author 1',
-  },
-  {
-    id: '2',
-    title: 'Book 2',
-    author: 'Author 2',
-  },
-  {
-    id: '3',
-    title: 'Book 3',
-    author: 'Author 3',
-  },
-];
+const initialState = [];
+const sortBooks = (books) => books.sort((a, b) => ((a.title > b.title) ? 1 : -1));
 
-const addBook = (payload) => ({
-  type: ADD_BOOK,
-  payload,
-});
-const removeBook = (payload) => ({
-  type: REMOVE_BOOK,
-  payload,
-});
+const getBooks = () => async (dispatch) => {
+  const result = await fetchBooks();
+  const books = Object.entries(result).map(([itemId, [book]]) => ({
+    id: itemId,
+    title: book.title,
+    author: book.author,
+  }));
+  dispatch({
+    type: GET_BOOKS,
+    payload: sortBooks(books),
+  });
+};
+
+const addBook = (payload) => async (dispatch) => {
+  await postBook(payload);
+  dispatch({
+    type: ADD_BOOK,
+    payload,
+  });
+};
+
+const removeBook = (payload) => async (dispatch) => {
+  await deleteBook(payload);
+  dispatch({
+    type: REMOVE_BOOK,
+    payload,
+  });
+};
 
 const booksReducer = ((state = initialState, action) => {
+  const books = [...state, action.payload];
   switch (action.type) {
+    case GET_BOOKS:
+      return action.payload;
     case ADD_BOOK:
-      return [...state, action.payload];
+      return sortBooks(books);
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.payload);
     default:
@@ -39,5 +50,5 @@ const booksReducer = ((state = initialState, action) => {
   }
 });
 
-export { addBook, removeBook };
+export { addBook, removeBook, getBooks };
 export default booksReducer;
