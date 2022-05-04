@@ -21,8 +21,6 @@ const AddBook = () => {
       dispatch(addBook(newBook));
       e.target.title.value = '';
       e.target.author.value = '';
-    } else {
-      alert('Please write item');
     }
   };
 
@@ -33,12 +31,14 @@ const AddBook = () => {
         className="input-text"
         placeholder="Book Title"
         name="title"
+        required
       />
       <input
         type="text"
         className="input-text"
         placeholder="Author"
         name="author"
+        required
       />
       <button className="input-submit" type="submit">
         ADD BOOK

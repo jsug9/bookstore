@@ -1,15 +1,13 @@
-const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
-const key = '99xxkSoFZQy4K4RxzPqC';
-const URL = baseURL + key;
+const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/99xxkSoFZQy4K4RxzPqC/books';
 
 const fetchBooks = async () => {
-  const result = await fetch(URL);
+  const result = await fetch(baseURL);
   const data = await result.json();
   return data;
 };
 
 const postBook = async (book) => {
-  const response = await fetch(URL, {
+  const response = await fetch(baseURL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -18,6 +16,7 @@ const postBook = async (book) => {
       item_id: book.id,
       title: book.title,
       author: book.author,
+      category: 'General',
     }),
   });
   const data = await response.text();
@@ -25,7 +24,7 @@ const postBook = async (book) => {
 };
 
 const deleteBook = async (id) => {
-  const response = await fetch(`${URL}/${id}`, {
+  const response = await fetch(`${baseURL}/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
