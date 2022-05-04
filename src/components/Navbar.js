@@ -26,7 +26,6 @@ const Navbar = () => {
               to={link.path}
               activeClassName={styles.avtiveLink}
               className={styles.link}
-              exact
             >
               {link.text}
             </NavLink>
