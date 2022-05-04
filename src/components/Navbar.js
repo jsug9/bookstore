@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from './Navbar.module.scss';
 
 const Navbar = () => {
   const links = [
@@ -17,15 +16,15 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={styles.navbar}>
+    <nav className="navbar">
       <h1>Bookstore</h1>
-      <ul className={styles.links}>
+      <ul className="links">
         {links.map((link) => (
           <li key={link.id}>
             <NavLink
               to={link.path}
-              activeClassName={styles.avtiveLink}
-              className={styles.link}
+              activeClassName="activeLink"
+              className="link"
             >
               {link.text}
             </NavLink>
