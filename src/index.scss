@@ -13,6 +13,9 @@ $greyBorder: #e8e8e8;
 $pinkishGrey: #c4c4c4;
 $warmGrey: #888888;
 
+// General padding
+$generalPadding: 0 4rem;
+
 body {
   background-color: $background;
   margin: 0;
@@ -36,7 +39,7 @@ header {
 
 .navbar {
   height: 5.938rem;
-  padding: 0 6rem;
+  padding: $generalPadding;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -105,10 +108,28 @@ link:active {
 }
 
 // BOOK CONTAINER
-.books {
+.booksContainer {
   display: flex;
   flex-direction: column;
-  padding: 0 3rem;
+  padding: $generalPadding;
+}
+
+.bookList{
+  background: red;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bookItem {
+  width: 90%;
+  margin: 0;
+  padding: 1rem 2rem;
+  list-style-type: none;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 hr {

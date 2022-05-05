@@ -12,10 +12,24 @@ const BookItem = (props) => {
   };
 
   return (
-    <li className="book">
-      <h3>{book.title}</h3>
-      <p>{book.author}</p>
-      <button type="button" className="removeButton" onClick={() => removeBookAction(book.id)}>Remove</button>
+    <li className="bookItem">
+      <div className="leftSide">
+        <h3>{book.title}</h3>
+        <p>{book.author}</p>
+        <button
+          type="button"
+          className="removeButton"
+          onClick={() => removeBookAction(book.id)}
+        >
+          Remove
+        </button>
+      </div>
+      <div className="middleSide">
+        Middle
+      </div>
+      <div className="rightSide">
+        Right
+      </div>
     </li>
   );
 };

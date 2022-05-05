@@ -2,24 +2,12 @@ import React from 'react';
 import AddBook from '../components/AddBook';
 import BookList from '../components/BookList';
 
-const BooksContainer = () => {
-  const books = [
-    {
-      id: 1,
-      title: 'Title',
-      author: 'Author',
-    },
-  ];
-
-  return (
-    <div className="books">
-      <div className="bookList">
-        <BookList books={books} />
-        <hr />
-      </div>
-      <AddBook />
-    </div>
-  );
-};
+const BooksContainer = () => (
+  <div className="booksContainer">
+    <BookList />
+    <hr />
+    <AddBook />
+  </div>
+);
 
 export default BooksContainer;
