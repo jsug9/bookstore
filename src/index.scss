@@ -16,6 +16,14 @@ $warmGrey: #888888;
 // General padding
 $generalPadding: 0 4rem;
 
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: $background;
   margin: 0;
@@ -115,14 +123,16 @@ link:active {
 }
 
 .bookList{
-  background: red;
   display: flex;
   flex-direction: column;
+  justify-content:space-evenly;
+  padding: 0;
+  margin: 0;
   gap: 1rem;
 }
 
 .bookItem {
-  width: 90%;
+  width: 100%;
   margin: 0;
   padding: 1rem 2rem;
   list-style-type: none;
