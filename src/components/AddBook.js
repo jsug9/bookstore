@@ -14,6 +14,7 @@ const AddBook = () => {
       id: uuidv4(),
       title: formTitle,
       author: formAuthor,
+      category: 'General',
     };
 
     if (formTitle.trim() && formAuthor.trim()) {

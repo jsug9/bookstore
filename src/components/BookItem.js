@@ -14,7 +14,7 @@ const BookItem = (props) => {
   return (
     <li className="bookItem">
       <div className="leftSide">
-        <p className="bookCategoryr">{book.category}</p>
+        <p className="bookCategory">{book.category}</p>
         <h3 className="bookTitle">{book.title}</h3>
         <p className="bookAuthor">{book.author}</p>
         <div className="bookButtons">
