@@ -14,15 +14,30 @@ const BookItem = (props) => {
   return (
     <li className="bookItem">
       <div className="leftSide">
-        <h3>{book.title}</h3>
-        <p>{book.author}</p>
-        <button
-          type="button"
-          className="removeButton"
-          onClick={() => removeBookAction(book.id)}
-        >
-          Remove
-        </button>
+        <p className="bookCategoryr">{book.category}</p>
+        <h3 className="bookTitle">{book.title}</h3>
+        <p className="bookAuthor">{book.author}</p>
+        <div className="bookButtons">
+          <button
+            type="button"
+            className="bookButton"
+          >
+            Comments
+          </button>
+          <button
+            type="button"
+            className="bookButton"
+            onClick={() => removeBookAction(book.id)}
+          >
+            Remove
+          </button>
+          <button
+            type="button"
+            className="bookButton"
+          >
+            Edit
+          </button>
+        </div>
       </div>
       <div className="middleSide">
         Middle
@@ -39,6 +54,7 @@ BookItem.propTypes = {
     id: PropTypes.string,
     title: PropTypes.string,
     author: PropTypes.string,
+    category: PropTypes.string,
   }).isRequired,
 };
 

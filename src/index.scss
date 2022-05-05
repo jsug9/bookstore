@@ -198,11 +198,35 @@ h2 {
 .book {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.removeButton {
-  width: 10%;
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bookAuthor {
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  font-family: $roboto;
+  font-weight: 300;
+  color: $coolBlue;
+
+}
+
+.bookButtons {
+  display: flex;
+  gap: 2rem;
+}
+
+.bookButton {
+  font-family: $roboto;
+  color: $coolBlue;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
 }
 
 // CATEGORIES
