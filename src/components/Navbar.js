@@ -1,6 +1,6 @@
 import React from 'react';
+import { Icon } from '@iconify/react';
 import { NavLink } from 'react-router-dom';
-import styles from './Navbar.module.scss';
 
 const Navbar = () => {
   const links = [
@@ -17,21 +17,25 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={styles.navbar}>
-      <h1>Bookstore</h1>
-      <ul className={styles.links}>
-        {links.map((link) => (
-          <li key={link.id}>
-            <NavLink
-              to={link.path}
-              activeClassName={styles.avtiveLink}
-              className={styles.link}
-            >
-              {link.text}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
+    <nav className="navbar">
+      <div className="rightNav">
+        <h1>Bookstore CMS</h1>
+        <ul className="links">
+          {links.map((link) => (
+            <li key={link.id}>
+              <NavLink
+                to={link.path}
+                className="link"
+              >
+                {link.text}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="oval">
+        <Icon className="icon" icon="bi:person-fill" />
+      </div>
     </nav>
   );
 };

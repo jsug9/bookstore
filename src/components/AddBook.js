@@ -2,7 +2,6 @@ import { v4 as uuidv4 } from 'uuid';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
-import styles from './AddBook.module.scss';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -15,6 +14,7 @@ const AddBook = () => {
       id: uuidv4(),
       title: formTitle,
       author: formAuthor,
+      category: 'General',
     };
 
     if (formTitle.trim() && formAuthor.trim()) {
@@ -25,24 +25,29 @@ const AddBook = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
-      <input
-        type="text"
-        className="input-text"
-        placeholder="Book Title"
-        name="title"
-        required
-      />
-      <input
-        type="text"
-        className="input-text"
-        placeholder="Author"
-        name="author"
-        required
-      />
-      <button className="input-submit" type="submit">
-        ADD BOOK
-      </button>
+    <form onSubmit={handleSubmit} className="form">
+      <h2>ADD NEW BOOK</h2>
+      <div className="wrapper">
+        <input
+          type="text"
+          className="input-text"
+          id="book-title"
+          placeholder="Book Title"
+          name="title"
+          required
+        />
+        <input
+          type="text"
+          className="input-text"
+          id="book-author"
+          placeholder="Author"
+          name="author"
+          required
+        />
+        <button className="input-submit" type="submit">
+          ADD BOOK
+        </button>
+      </div>
     </form>
   );
 };

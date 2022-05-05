@@ -1,9 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { checkStatus } from '../redux/categories/categories';
-import styles from './Categories.module.scss';
 
-const Categories = () => {
+const CategoriesContainer = () => {
   const dispatch = useDispatch();
   const categories = useSelector((state) => state.categories);
 
@@ -12,7 +11,7 @@ const Categories = () => {
   };
 
   return (
-    <div className={styles.categories}>
+    <div className="categories">
       <h2>Categories section</h2>
       <ul>
         {categories.map((catetory) => (
@@ -21,9 +20,9 @@ const Categories = () => {
           </li>
         ))}
       </ul>
-      <button type="button" className={styles.status} onClick={() => handleClick()}>Check Status</button>
+      <button type="button" className="status" onClick={() => handleClick()}>Check Status</button>
     </div>
   );
 };
 
-export default Categories;
+export default CategoriesContainer;
