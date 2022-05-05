@@ -145,7 +145,7 @@ hr {
   list-style-type: none;
   background: white;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -154,6 +154,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 35%;
 }
 
 .bookCategory {
@@ -166,6 +167,7 @@ hr {
 .bookTitle {
   font-family: $roboto;
   font-weight: bold;
+  text-align: left;
   font-size: 1.25rem;
   margin: -1rem 0;
 }
@@ -206,6 +208,25 @@ hr {
 }
 
 // Middle Side
+.middleSide {
+  display: flex;
+}
+
+.percentageText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.percentage {
+  margin-bottom: -1rem;
+  font-size: 2rem;
+}
+
+.completedP {
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
 
 // Right Side
 .rightSide {
@@ -222,6 +243,7 @@ hr {
 }
 
 .chapter {
+  margin-top: -0.5rem;
   font-family: $roboto;
   font-size: 1rem;
   font-weight: 300;
