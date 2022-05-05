@@ -219,7 +219,18 @@ hr {
   background: #fafafa;
   border-radius: 50%;
   border: 1px solid #fafafa;
-  transform: scale(0.60);
+  transform: scale(0.6);
+}
+
+.mask .fill {
+  clip: rect(0, 75px, 150px, 0);
+  background-color: #227ded;
+}
+
+.mask.full,
+.circle .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(135deg);
 }
 
 .circle-wrap .circle .mask,
@@ -231,14 +242,14 @@ hr {
 }
 
 .circle-wrap .circle .mask {
-  clip: rect(0px, 150px, 150px, 75px);
+  clip: rect(0, 150px, 150px, 75px);
 }
 
 .circle-wrap .inside-circle {
   width: 122px;
   height: 122px;
   border-radius: 50%;
-  background: #ffffff;
+  background: #fff;
   line-height: 120px;
   text-align: center;
   margin-top: 14px;
@@ -250,21 +261,11 @@ hr {
   font-size: 2em;
 }
 
-.mask .fill {
-  clip: rect(0px, 75px, 150px, 0px);
-  background-color: #227ded;
-}
-
-.mask.full,
-.circle .fill {
-  animation: fill ease-in-out 3s;
-  transform: rotate(135deg);
-}
-
-@keyframes fill{
+@keyframes fill {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(135deg);
   }
