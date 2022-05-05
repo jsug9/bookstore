@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 // Fonts
@@ -12,6 +12,7 @@ $coolBlue: #4386bf;
 $greyBorder: #e8e8e8;
 
 body {
+  background-color: $background;
   margin: 0;
   font-family:
     $montserrat,
@@ -25,15 +26,25 @@ body {
 }
 
 // NAVBAR
+header {
+  background-color: white;
+}
+
 .navbar {
-  background-color: #282c34;
-  padding: 0 2rem;
+  height: 5.938rem;
+  padding: 0 6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
   margin-bottom: 2rem;
+}
+
+.rightNav {
+  display: flex;
+  align-items: baseline;
+  gap: 3rem;
 }
 
 .links {
@@ -43,26 +54,50 @@ body {
   display: flex;
   align-items: baseline;
   justify-items: baseline;
-  gap: 15px;
+  gap: 2rem;
 }
 
 li {
   text-decoration: none;
 }
 
+h1 {
+  color: $azure;
+  font-weight: bold;
+  font-family: $montserrat;
+  font-size: 1.875rem;
+}
+
 .link,
 link:active {
-  color: white;
-  font-family: $roboto;
+  color: black;
+  font-family: $montserrat;
+  opacity: 0.5;
   text-decoration: none;
 }
 
 .link:hover {
-  color: orange;
+  opacity: 1;
 }
 
 .activeLink {
-  color: orange;
+  opacity: 1;
+}
+
+.oval {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.813rem;
+  height: 2.813rem;
+  border-radius: 75px;
+  border: solid 1px $greyBorder;
+}
+
+.icon {
+  width: 1.063rem;
+  height: 1.063rem;
+  color: $azure;
 }
 
 // BOOK CONTAINER
@@ -70,6 +105,10 @@ link:active {
   display: flex;
   flex-direction: column;
   padding: 0 3rem;
+}
+
+hr {
+  border: solid 1px $greyBorder;
 }
 
 // ADD BOOK

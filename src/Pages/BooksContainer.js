@@ -16,6 +16,7 @@ const BooksContainer = () => {
       <div className="bookList">
         <h2>Books Section</h2>
         <BookList books={books} />
+        <hr />
       </div>
       <AddBook />
     </div>

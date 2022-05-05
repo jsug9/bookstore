@@ -12,7 +12,9 @@ import BooksContainer from './Pages/BooksContainer';
 const App = () => (
   <Router basename={process.env.PUBLIC_URL}>
     <div className="App">
-      <Navbar />
+      <header>
+        <Navbar />
+      </header>
       <Routes>
         <Route path="/" element={<BooksContainer />} />
         <Route path="/categories" element={<Categories />} />
