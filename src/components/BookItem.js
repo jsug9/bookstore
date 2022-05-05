@@ -41,7 +41,20 @@ const BookItem = (props) => {
       </div>
 
       <div className="middleSide">
-        <div className="percentageCircle" />
+        <div className="circle-wrap">
+          <div className="circle">
+            <div className="mask full">
+              <div className="fill" />
+            </div>
+
+            <div className="mask half">
+              <div className="fill" />
+            </div>
+
+            <div className="inside-circle" />
+          </div>
+        </div>
+
         <div className="percentageText">
           <p className="percentage">64%</p>
           <p className="completedP">Completed</p>
