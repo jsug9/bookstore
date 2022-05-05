@@ -14,7 +14,6 @@ const BooksContainer = () => {
   return (
     <div className="books">
       <div className="bookList">
-        <h2>Books Section</h2>
         <BookList books={books} />
         <hr />
       </div>

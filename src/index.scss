@@ -10,19 +10,23 @@ $background: #fafafa;
 $azure: #0290ff;
 $coolBlue: #4386bf;
 $greyBorder: #e8e8e8;
+$pinkishGrey: #c4c4c4;
+$warmGrey: #888888;
 
 body {
   background-color: $background;
   margin: 0;
-  font-family:
-    $montserrat,
-    $roboto;
+  font-family: $montserrat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .App {
   text-align: center;
+}
+
+button {
+  font-family: $roboto;
 }
 
 // NAVBAR
@@ -108,14 +112,50 @@ link:active {
 }
 
 hr {
+  margin: 1rem 0;
   border: solid 1px $greyBorder;
 }
 
 // ADD BOOK
-.form {
+form {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h2 {
+  color: $warmGrey;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   padding-bottom: 5rem;
+}
+
+.input-text {
+  font-family: $montserrat;
+  padding: 1rem;
+  border-radius: 4px;
+  border: solid 1px $greyBorder;
+}
+
+#book-title {
+  width: 50%;
+}
+
+#book-author {
+  width: 25%;
+}
+
+.input-submit {
+  width: 15%;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  background-color: $azure;
 }
 
 // BOOKLIST
