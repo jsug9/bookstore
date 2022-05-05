@@ -43,7 +43,9 @@ const BookItem = (props) => {
         Middle
       </div>
       <div className="rightSide">
-        Right
+        <p>CURRENT CHAPTER</p>
+        <p>Chapter 17</p>
+        <button type="button">UPDATE PROGRESS</button>
       </div>
     </li>
   );

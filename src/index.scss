@@ -11,7 +11,7 @@ $azure: #0290ff;
 $coolBlue: #4386bf;
 $greyBorder: #e8e8e8;
 $pinkishGrey: #c4c4c4;
-$warmGrey: #888888;
+$warmGrey: #888;
 
 // General padding
 $generalPadding: 0 4rem;
@@ -19,8 +19,9 @@ $generalPadding: 0 4rem;
 * {
   box-sizing: border-box;
 }
-*:before,
-*:after {
+
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -122,10 +123,10 @@ link:active {
   padding: $generalPadding;
 }
 
-.bookList{
+.bookList {
   display: flex;
   flex-direction: column;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   padding: 0;
   margin: 0;
   gap: 1rem;
@@ -189,17 +190,13 @@ h2 {
   background-color: $azure;
 }
 
-// BOOKLIST
-.bookList {
-  align-items: center;
-}
-
 // BOOK ITEM
 .book {
   display: flex;
   flex-direction: column;
 }
 
+// Left Side
 .leftSide {
   display: flex;
   flex-direction: column;
@@ -223,7 +220,6 @@ h2 {
   font-family: $roboto;
   font-weight: 300;
   color: $coolBlue;
-
 }
 
 .bookButtons {
@@ -252,6 +248,15 @@ h2 {
 
 .bookButton:active {
   opacity: 1;
+}
+
+// Middle Side
+
+// Right Side
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 // CATEGORIES
