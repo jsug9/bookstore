@@ -6,10 +6,11 @@
 
 ## Built With
 
-- HTML
 - SCSS
 - JavaScript
 - React
+- Redux
+- Zeplin
 
 ## Live Demo
 
