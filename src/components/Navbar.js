@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from '@iconify/react';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
@@ -31,6 +32,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+      <Icon icon="bi:person-fill" />
     </nav>
   );
 };
