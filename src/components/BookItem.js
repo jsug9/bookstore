@@ -39,13 +39,15 @@ const BookItem = (props) => {
           </button>
         </div>
       </div>
+
       <div className="middleSide">
         Middle
       </div>
+
       <div className="rightSide">
-        <p>CURRENT CHAPTER</p>
-        <p>Chapter 17</p>
-        <button type="button">UPDATE PROGRESS</button>
+        <p className="currentChapter">CURRENT CHAPTER</p>
+        <p className="chapter">Chapter 17</p>
+        <button className="updateProgress" type="button">UPDATE PROGRESS</button>
       </div>
     </li>
   );
