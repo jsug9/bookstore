@@ -25,7 +25,6 @@ const Navbar = () => {
             <li key={link.id}>
               <NavLink
                 to={link.path}
-                activeClassName="activeLink"
                 className="link"
               >
                 {link.text}
