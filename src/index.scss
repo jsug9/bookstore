@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+// Fonts
+$montserrat: 'Montserrat', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+// Colors
+$background: #fafafa;
+$azure: #0290ff;
+$coolBlue: #4386bf;
+$greyBorder: #e8e8e8;
+
 body {
   margin: 0;
   font-family:
-    'Montserrat',
-    'Roboto',
-    sans-serif;
+    $montserrat,
+    $roboto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -14,7 +23,6 @@ body {
 .App {
   text-align: center;
 }
-
 
 // NAVBAR
 .navbar {
@@ -45,7 +53,7 @@ li {
 .link,
 link:active {
   color: white;
-  font-family: 'Roboto';
+  font-family: $roboto;
   text-decoration: none;
 }
 
