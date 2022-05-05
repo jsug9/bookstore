@@ -5,7 +5,14 @@ const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 const GET_BOOKS = 'bookStore/books/GET_BOOKS ';
 
 const initialState = [];
-const sortBooks = (books) => books.sort((a, b) => ((a.title > b.title) ? 1 : -1));
+const sortByTitle = (a, b) => {
+  if (a.title.toLowerCase() > b.title.toLowerCase()) {
+    return 1;
+  }
+  return -1;
+};
+
+const sortBooks = (books) => books.sort(sortByTitle);
 
 const getBooks = () => async (dispatch) => {
   const result = await fetchBooks();
