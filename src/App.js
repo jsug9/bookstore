@@ -6,7 +6,7 @@ import {
 import React from 'react';
 
 import Navbar from './components/Navbar';
-import Categories from './Pages/Categories';
+import CategoriesContainer from './Pages/CategoriesContainer';
 import BooksContainer from './Pages/BooksContainer';
 
 const App = () => (
@@ -17,7 +17,7 @@ const App = () => (
       </header>
       <Routes>
         <Route path="/" element={<BooksContainer />} />
-        <Route path="/categories" element={<Categories />} />
+        <Route path="/categories" element={<CategoriesContainer />} />
       </Routes>
     </div>
   </Router>

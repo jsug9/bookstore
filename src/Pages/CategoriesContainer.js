@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { checkStatus } from '../redux/categories/categories';
 
-const Categories = () => {
+const CategoriesContainer = () => {
   const dispatch = useDispatch();
   const categories = useSelector((state) => state.categories);
 
@@ -25,4 +25,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default CategoriesContainer;
