@@ -56,7 +56,7 @@ const BookItem = (props) => {
         </div>
 
         <div className="percentageText">
-          <p className="percentage">64%</p>
+          <p className="percentage">75%</p>
           <p className="completedP">Completed</p>
         </div>
       </div>
